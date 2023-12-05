@@ -10,14 +10,14 @@ const router = Router()
 
 router.get('/', getAllProducts)
 
-router.get('/products', authRequired, getProducts)
+router.get('/products', getProducts)
 
-router.get('/product/:id', authRequired, getProduct)
+router.get('/product/:id',  getProduct)
 
-router.post('/product', authRequired, validateSchema(createProductSchema), createProduct)
+router.post('/product', validateSchema(createProductSchema), createProduct)
 
-router.delete('/product/:id', authRequired, deleteProduct)
+router.delete('/product/:id', deleteProduct)
 
-router.put('/product/:id', authRequired, updateProduct)
+router.put('/product/:id', updateProduct)
 
 export default router;
