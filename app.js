@@ -11,7 +11,7 @@ import taskRoutes from './src/routes/tasks.routes.js';
 const app = express();
 
 app.use(cors(
-    {origin: " https://friendly-jade-smock.cyclic.app/"}
+    {origin: "https://testdeploy-rust.vercel.app"}
 )); 
 app.use(morgan('dev'));
 app.use(express.json());
