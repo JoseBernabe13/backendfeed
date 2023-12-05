@@ -9,6 +9,7 @@ export const getAllProducts = async (req, res) => {
         return res.status(404).json({message: "Something went wrong"})
     }
 }
+
 export const getProducts = async (req, res) => {
     try {
         const products = await Product.find({
