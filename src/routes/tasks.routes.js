@@ -6,6 +6,10 @@ import { createProductSchema } from "../schemas/product.schema.js"
 
 const router = Router()
 
+
+
+router.get('/products-all', getProducts)
+
 router.get('/products', authRequired, getProducts)
 
 router.get('/product/:id', authRequired, getProduct)
