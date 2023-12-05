@@ -8,7 +8,7 @@ const router = Router()
 
 
 
-router.get('/products-all', getProducts)
+router.get('/', getAllProducts)
 
 router.get('/products', authRequired, getProducts)
 

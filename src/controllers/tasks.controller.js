@@ -1,5 +1,14 @@
 import Product from '../models/product.model.js'
 
+
+export const getAllProducts = async (req, res) => {
+    try {
+        const productsAll = await Product.find()
+        res.json(productsAll)
+    } catch (error) {
+        return res.status(404).json({message: "Something went wrong"})
+    }
+}
 export const getProducts = async (req, res) => {
     try {
         const products = await Product.find({
@@ -10,6 +19,8 @@ export const getProducts = async (req, res) => {
         return res.status(404).json({message: "Something went wrong"})
     }
 }
+
+
 
 export const createProduct = async (req, res) => {
     try {
