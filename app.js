@@ -10,7 +10,9 @@ import taskRoutes from './src/routes/tasks.routes.js';
  
 const app = express();
 
-app.use(cors()); 
+app.use(cors(
+    {origin: " https://friendly-jade-smock.cyclic.app/"}
+)); 
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
