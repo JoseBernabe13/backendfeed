@@ -10,10 +10,7 @@ import taskRoutes from './src/routes/tasks.routes.js';
  
 const app = express();
 
-app.use(cors({
-    origin: 'https://frontend-deploy-omega.vercel.app/',
-    credentials: true,
-})); 
+app.use(cors()); 
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
