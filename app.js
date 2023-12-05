@@ -11,7 +11,9 @@ import taskRoutes from './src/routes/tasks.routes.js';
 const app = express();
 
 app.use(cors(
-    {origin: "*"}
+    {origin: "*",
+        credentials: true}
+
 )); 
 app.use(morgan('dev'));
 app.use(express.json());
