@@ -1,10 +1,12 @@
+import {connectDB} from './src/db.js'
+
 import express from 'express';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
-import authRoutes from './routes/auth.routes.js';
-import taskRoutes from './routes/tasks.routes.js';
+import authRoutes from './src/routes/auth.routes.js';
+import taskRoutes from './src/routes/tasks.routes.js';
  
 const app = express();
 
@@ -19,4 +21,8 @@ app.use(cookieParser());
 app.use('/api', authRoutes);
 app.use('/api', taskRoutes);
 
-export default app; 
+connectDB();
+
+app.listen(3000, () => {
+    console.log("server conected to " + 3000)
+});
